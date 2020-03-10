@@ -15,6 +15,11 @@ BlueF='\e[1;34m'
 ##### Log AMS ? #####
 versi='1.0'
 
+source "$(pwd)/spinner.sh"
+clear
+
+
+
 ###################################################                                             
 # CTRL + C                                        #
 ###################################################
@@ -60,95 +65,125 @@ read -p "Install Patch [Y/n]" response
 
 case $response in [yY][eE][sS]|[yY]|[jJ]|'') 
 
-    echo -e $cyan"Installing."
+    start_spinner "Installing."
     pkg update -y > /dev/null 2>&1
+    stop_spinner $?
     clear
-    echo -e $cyan"Installing.."
+    start_spinner "Installing.."
     pkg upgrade -y > /dev/null 2>&1
+    stop_spinner $?
     clear
-    echo -e $cyan"Installing..."
+    start_spinner "Installing..."
     pkg install python -y > /dev/null 2>&1
+    stop_spinner $?
     clear
-    echo -e $cyan"Installing."
+    start_spinner "Installing."
     pkg install python2 -y > /dev/null 2>&1
+    stop_spinner $?
     clear
-    echo -e $cyan"Installing.."
+    start_spinner "Installing.."
     pkg install python3 -y > /dev/null 2>&1
+    stop_spinner $?
     clear
-    echo -e $cyan"Installing..."
+    start_spinner "Installing..."
     pkg install lolcat -y > /dev/null 2>&1
+    stop_spinner $?
     clear
-    echo -e $cyan"Installing."
+    start_spinner "Installing."
     pkg install toilet -y > /dev/null 2>&1
+    stop_spinner $?
     clear
-    echo -e $cyan"Installing.."
+    start_spinner "Installing.."
     pkg install cowsay -y > /dev/null 2>&1
+    stop_spinner $?
     clear
-    echo -e $cyan"Installing..."
+    start_spinner "Installing..."
     pkg install jq -y > /dev/null 2>&1
+    stop_spinner $?
     clear
-    echo -e $cyan"Installing."
+    start_spinner "Installing."
     pkg install python2-pip -y > /dev/null 2>&1
+    stop_spinner $?
     clear
-    echo -e $cyan"Installing.."
+    start_spinner "Installing.."
     pkg install python3-pip -y > /dev/null 2>&1
+    stop_spinner $?
     clear
-    echo -e $cyan"Installing..."
+    start_spinner "Installing..."
     pkg install pip2 -y > /dev/null 2>&1
+    stop_spinner $?
     clear
-    echo -e $cyan"Installing."
+    start_spinner "Installing."
     pkg install pip -y > /dev/null 2>&1
+    stop_spinner $?
     clear
-    echo -e $cyan"Installing.."
+    start_spinner "Installing.."
     pkg install ruby -y > /dev/null 2>&1
+    stop_spinner $?
     clear
-    echo -e $cyan"Installing..."
+    start_spinner "Installing..."
     pkg install figlet -y > /dev/null 2>&1
+    stop_spinner $?
     clear
-    echo -e $cyan"Installing."
+    start_spinner "Installing."
     pkg install clang -y > /dev/null 2>&1
+    stop_spinner $?
     clear
-    echo -e $cyan"Installing.."
+    start_spinner "Installing.."
     pkg install curl -y > /dev/null 2>&1
+    stop_spinner $?
     clear
-    echo -e $cyan"Installing..."
+    start_spinner "Installing..."
     pkg install sh -y > /dev/null 2>&1
+    stop_spinner $?
     clear
-    echo -e $cyan"Installing."
+    start_spinner "Installing."
     pkg install wget -y > /dev/null 2>&1
+    stop_spinner $?
     clear
-    echo -e $cyan"Installing.."
+    start_spinner "Installing.."
     pkg install tor -y > /dev/null 2>&1
+    stop_spinner $?
     clear
-    echo -e $cyan"Installing..."
+    start_spinner "Installing..."
     pkg install nano -y > /dev/null 2>&1
+    stop_spinner $?
     clear
-    echo -e $cyan"Installing."
+    start_spinner "Installing."
     pkg install urllib3 chardet certifi idna request -y > /dev/null 2>&1
+    stop_spinner $?
     clear
-    echo -e $cyan"Installing.."
+    start_spinner "Installing.."
     pkg install progress -y > /dev/null 2>&1
+    stop_spinner $?
     clear
-    echo -e $cyan"Installing..."
+    start_spinner "Installing..."
     pkg install mechanize -y > /dev/null 2>&1
+    stop_spinner $?
     clear
-    echo -e $cyan"Installing."
+    start_spinner "Installing."
     pkg install requests -y > /dev/null 2>&1
+    stop_spinner $?
     clear
-    echo -e $cyan"Installing.."
+    start_spinner "Installing.."
     pkg install matrix -y > /dev/null 2>&1
+    stop_spinner $?
     clear
-    echo -e $cyan"Installing..."
+    start_spinner "Installing..."
     pip2 install progress -y > /dev/null 2>&1
+    stop_spinner $?
     clear
-    echo -e $cyan"Installing."
+    start_spinner "Installing."
     pip2 install mechanize -y > /dev/null 2>&1
+    stop_spinner $?
     clear
-    echo -e $cyan"Installing.."
+    start_spinner "Installing.."
     pip2 install requests -y  > /dev/null 2>&1
+    stop_spinner $?
     clear
-    echo -e $cyan"Installing..."
+    start_spinner "Installing..."
     pkg install mingw-w64 > /dev/null 2>&1
+    stop_spinner $?
     clear
     figlet -f slant " [ ✔ ] S U K S E S "|lolcat
 
